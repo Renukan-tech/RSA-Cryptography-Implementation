@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA File Encryption / Decryption</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+            background: #f4f4f4;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>RSA File Encryption / Decryption</h2>
+
+    <form action="http://localhost:3000/process"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <input type="file" name="file" required>
+        <br><br>
+
+        <select name="mode" required>
+            <option value="encrypt">Encrypt 🔒</option>
+            <option value="decrypt">Decrypt 🔓</option>
+        </select>
+        <br><br>
+
+        <input type="text" name="key" placeholder="RSA key">
+        <br><br>
+
+        <button type="submit">Process & Download</button>
+    </form>
+
+    <p>
+        After clicking the button, the processed file will be downloaded automatically.
+    </p>
+
+</body>
+</html>
